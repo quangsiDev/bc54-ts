@@ -105,3 +105,27 @@ let sv1: SV = {
   name: "bobby",
   gender: GenderType.male,
 };
+
+function myConsoleLog(data: number) {
+  console.log("😀 - myConsoleLog - data", data);
+}
+
+// myConsoleLog("8");
+myConsoleLog(8);
+
+// generic
+
+function myConsoleGeneric<T>(data: T) {
+  console.log("😀 - data", data);
+}
+myConsoleGeneric<string>("helllo");
+myConsoleGeneric(true);
+myConsoleGeneric(222);
+
+function introduceProduct<F, S>(value1: F, value2: S) {
+  console.log("😀 - value2", value2);
+  console.log("😀 - value1", value1);
+}
+
+introduceProduct<string, number>("Tivi sony", 5);
+introduceProduct<string, string>("Tivi sony", "rất tốt");
